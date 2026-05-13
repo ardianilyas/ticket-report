@@ -1,10 +1,13 @@
 import "express";
+import type { roleEnum } from "../../db/schemas";
+
+type UserRole = typeof roleEnum.enumValues[number];
 
 export interface SessionUser {
   id: string;
   name?: string;
   email: string;
-  role: string | null | undefined,
+  role: UserRole,
   image?: string | null | undefined;
 }
 

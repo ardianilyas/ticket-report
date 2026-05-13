@@ -21,7 +21,10 @@ export async function authMiddleware(
   
     req.auth = {
       session: session.session,
-      user: session.user
+      user: {
+        ...session.user,
+        role: session.user.role ?? "staff"
+      }
     }
 
     next();
