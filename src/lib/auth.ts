@@ -11,4 +11,14 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  user: {
+    additionalFields: {
+      role: {
+        type: schema.roleEnum.enumValues,
+        required: false,
+        defaultValue: "staff",
+        input: false
+      },
+    }
+  }
 });

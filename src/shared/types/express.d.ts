@@ -4,6 +4,7 @@ export interface SessionUser {
   id: string;
   name?: string;
   email: string;
+  role: string | null | undefined,
   image?: string | null | undefined;
 }
 
