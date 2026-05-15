@@ -11,7 +11,8 @@ export const products = pgTable("products", {
   unit: text("unit").notNull(),
   price: numeric("price", {
     precision: 12,
-    scale: 2
+    scale: 2,
+    mode: "number"
   }).notNull(),
   createdAt: timestamp("created_at")
     .defaultNow()
