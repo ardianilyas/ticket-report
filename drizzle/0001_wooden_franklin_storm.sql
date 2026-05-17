@@ -1,0 +1,1 @@
+ALTER TABLE "purchase_requests" ADD COLUMN "reject_reason" text;

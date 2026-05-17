@@ -17,6 +17,7 @@ export const purchaseRequests = pgTable("purchase_requests", {
   status: purchaseRequestStatusEnum("status")
     .notNull()
     .default("draft"),
+  rejectReason: text("reject_reason"),
   notes: text("notes"),
   requestDate: timestamp("request_date")
     .defaultNow()
