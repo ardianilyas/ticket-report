@@ -1,15 +1,7 @@
-# buylo-backend
+# Express TS Better-auth starter kit
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.4. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Auth Route
+- Sign in : /api/auth/sign-in/email
+- Sign up : /api/auth/sign-up/email
+- Sign out : /api/auth/sign-out
+- Get Session : /api/auth/get-session
