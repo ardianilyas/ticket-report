@@ -5,7 +5,7 @@ import * as schema from "../../src/db/schemas";
 import type { UserRole } from "../../src/shared/types/express";
 import { eq } from "drizzle-orm";
 
-export async function authenticate(role: UserRole = "staff") {
+export async function authenticate(role: UserRole = "user") {
   const agent = request.agent(app)
 
   const user = {

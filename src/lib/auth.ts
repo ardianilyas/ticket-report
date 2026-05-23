@@ -16,7 +16,7 @@ export const auth = betterAuth({
       role: {
         type: schema.roleEnum.enumValues,
         required: false,
-        defaultValue: "staff",
+        defaultValue: "user",
         input: false
       },
     }
