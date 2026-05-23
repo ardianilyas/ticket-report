@@ -1,10 +1,11 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, afterEach, describe, expect, it } from "vitest";
 import request from "supertest";
 import app from "../../server";
 import { authenticate } from "../../../tests/helpers/auth.helper";
 import { db } from "../../db";
 import { categories } from "../../db/schemas";
 import { CATEGORY_ROUTE_TEST } from "./category.constant";
+import { clearDb } from "../../../tests/helpers/clear-db";
 
 describe("Categories endpoint", () => {
   let categoryId: string;
@@ -22,6 +23,10 @@ describe("Categories endpoint", () => {
     }
 
     categoryId = category.id
+  })
+
+  afterEach(async () => {
+    await clearDb();
   })
 
   describe("GET /api/categories", () => {
